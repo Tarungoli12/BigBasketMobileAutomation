@@ -32,4 +32,8 @@ public class LoginSteps {
     }
 
 
+    @When("user clicks start shopping button and sets location")
+    public void userClicksStartShoppingButtonAndSetsLocation() {
+        loginPage.userClicksStartShoppingBtnAndSetsLocation();
+    }
 }

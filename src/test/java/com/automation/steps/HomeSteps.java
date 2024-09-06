@@ -1,6 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.HomePage;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -16,8 +17,8 @@ public class HomeSteps {
 
 
     @When("user search for {string}")
-    public void userSearchFor(String product) {
-        homePage.searchForInSearchBar(product);
+    public void userSearchFor(String productName) {
+        homePage.searchForInSearchBar(ConfigReader.getConfigValue(productName));
     }
 
 
